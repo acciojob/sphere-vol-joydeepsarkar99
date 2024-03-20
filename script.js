@@ -5,7 +5,8 @@ function volume_sphere() {
 
 	btn.addEventListener("click",calculateVol)
 
-	function calculateVol(){
+	function calculateVol(e){
+		e.preventDefault()
 	    let r = +inputRadius.value
 		if(r >= 0 && typeof(r) === "number"){
 			let ans = ((4/3)*(Math.PI)*(r**3)).toFixed(4)
